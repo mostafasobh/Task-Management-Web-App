@@ -1,0 +1,42 @@
+.bgRed{
+    overflow: scroll;
+}
+.modal-title-container{
+    width: 80%;
+    /* background-color: rgb(107, 104, 255); */
+}
+.modal-card-title{
+    font-family: 'Roboto';
+    background-color: #c1bbff;
+}
+.modal-card-title:focus{
+    background-color: #f0efff;
+}
+
+.modal-description-container{
+    margin-top: 1.2rem;
+    width: 70%;
+}
+.modal-card-description{
+    font-family: 'Noto Sans KR';
+    font-size: .8rem;
+    color: rgb(10, 3, 3);
+    padding: 4px;
+    height: 100px;
+    background-color: #a9a0ff;
+    transition: margin .1s;
+}
+.modal-card-description:focus{
+    margin-top: 6%;
+    margin-left: 3%;
+    margin-left: 3%;
+    background-color: #f0efff;
+}
+
+.save-exite-container{
+    transition: margin .1s;
+}
+.modal-card-description:focus + .save-exite-container{
+    margin-left: 3%;
+
+}

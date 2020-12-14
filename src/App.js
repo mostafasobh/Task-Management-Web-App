@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { connect } from 'react-redux'
+import Columns from './components/columns/Columns';
+import Modal from './components/Modal/Modal'
+import Example from './components/dnd/example'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Modal />
+      <Columns />
+      {/* <DndProvider backend={HTML5Backend}>
+        <Example />
+      </DndProvider> */}
     </div>
   );
 }
-
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    // ctr:state.count
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // increment:()=>dispatch({type:'add'}),
+    // decrement:()=>dispatch({type:'subtract'}),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);
