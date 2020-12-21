@@ -1,9 +1,9 @@
-# Trello-clone App
+# Trello-Clone App
 ![](images/Card.png)
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## App Description
 
+Simply put it's an Task Managment app that enables Teams To work together
 In the project directory, you can run:
 
 ### `npm start`
