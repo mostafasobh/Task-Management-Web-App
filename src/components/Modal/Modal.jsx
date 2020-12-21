@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -6,12 +6,12 @@ import Fade from '@material-ui/core/Fade';
 import TextareaAutosize from 'react-textarea-autosize';
 import { connect } from 'react-redux'
 import './Modal.css'
+import Button from '../Button/Button'
 
 const useStyles = makeStyles((theme) => ({
     modal: {
         display: 'flex',
         justifyContent: 'center',
-        overflow: 'auto',
     },
     paper: {
 
@@ -21,13 +21,14 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '50px',
         outline: 'none',
         width: '55%',
-        backgroundColor: '#c3bcff'
+        backgroundColor: '#e0dcff',
+        overflow: 'auto',
     },
 }));
 
+
 function TransitionsModal(props) {
     const classes = useStyles();
-    const ref = useRef([])
     const onChangeHandler = (e, str) => {
         switch (str) {
             case 'title':
@@ -36,12 +37,15 @@ function TransitionsModal(props) {
                 break;
             case 'description':
                 props.setActiveCarddecription(e.target.value)
-                props.setCardDescription(e.target.value, props.activeCard.id, props.activeCard.column)
                 break;
             default:
                 return null
         }
     }
+    const applySave = () => {
+        props.setCardDescription(props.activeCard.description ? props.activeCard.description : '', props.activeCard.id, props.activeCard.column)
+    }
+
     return (
         <div>
             <Modal
@@ -49,7 +53,7 @@ function TransitionsModal(props) {
                 aria-describedby="transition-modal-description"
                 className={classes.modal}
                 open={props.modal}
-                onClose={(e) => props.closeModal(props.activeCard)}
+                onClose={() => { props.closeModal(props.activeCard); }}
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
@@ -59,20 +63,12 @@ function TransitionsModal(props) {
                 <Fade in={props.modal}>
                     <div className={classes.paper}>
                         <div className='modal-title-container'>
-                            {/* <textarea
-                                onChange={(e) => onChangeHandler(e, 'title')}
-                                ref={el => ref.current[0] = el}
-                                className="title modal-card-title"
-                                value={props.activeCard ? props.activeCard.headline : null}
-                                >
-                            </textarea> */}
                             <TextareaAutosize
                                 spellCheck={false}
                                 className="title modal-card-title"
                                 rows={4}
                                 value={props.activeCard ? props.activeCard.headline : null}
                                 onChange={(e) => onChangeHandler(e, 'title')}
-                                ref={el => ref.current[0] = el}
                             />
                         </div>
                         <div className='modal-description-container'>
@@ -81,15 +77,12 @@ function TransitionsModal(props) {
                                 spellCheck={false}
                                 rows={4}
                                 onChange={(e) => onChangeHandler(e, 'description')}
-                                ref={el => ref.current[1] = el}
                                 className="title modal-card-description"
                                 value={props.activeCard ? props.activeCard.description : null}
                             />
-
                             <div className='save-exite-container'>
-                                <button>save</button>
-                                <button>X</button>
-                                <h1 style={{ color: 'red' }}>remember to move autosize library</h1>
+                                <Button click={() => { applySave() }} type='normal'>save</Button>
+                                <Button type='close'></Button>
                             </div>
                         </div>
                     </div>

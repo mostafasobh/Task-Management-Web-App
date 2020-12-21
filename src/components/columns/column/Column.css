@@ -1,0 +1,7 @@
+.isDraggingOver{
+    background-color: rgba(245, 169, 255, 0.459);
+    transition: background-color .2s;
+}
+.more-space{
+    padding-bottom: 50px;
+}

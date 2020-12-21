@@ -1,14 +1,41 @@
 .App {
-  background-image: linear-gradient(to right bottom, #f0b8df, #dc91cb, #c469ba, #ab40aa, #8e009b);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
+  background-image: linear-gradient(to left, #9f1e83, #862385, #6c2684, #502981, #30297c);
+  /* display: inline-block; */
   flex-direction: row;
+  height: 100vh;
+  
 }
-
+html{
+  height: 100%;
+}
 *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+}
+.task-container{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.add-column{
+  align-self: flex-start;
+  /* height: 0%; */
+  margin: 5px;
+  width: 250px;
+  min-width: 250px;
+  /* min-height: 500px; */
+  max-height: 500px;
+  border-radius: 5px;
+  background-color: rgba(189, 193, 255, 0.788);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color:white;
+  padding: 20px;
+  cursor: pointer;
+}
+.add-column:hover{
+  background-color: burlywood;
 }

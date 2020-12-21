@@ -6,8 +6,9 @@
     /* background-color: rgb(107, 104, 255); */
 }
 .modal-card-title{
+    font-size: 1.2rem;
     font-family: 'Roboto';
-    background-color: #c1bbff;
+    /* background-color: #c1bbff; */
 }
 .modal-card-title:focus{
     background-color: #f0efff;
@@ -21,12 +22,13 @@
     font-family: 'Noto Sans KR';
     font-size: .8rem;
     color: rgb(10, 3, 3);
-    padding: 4px;
+    padding: 6px;
     height: 100px;
-    background-color: #a9a0ff;
-    transition: margin .1s;
+    background-color: #cdc8f8;
+    transition: margin .3s;
 }
 .modal-card-description:focus{
+    padding: 6px;
     margin-top: 6%;
     margin-left: 3%;
     margin-left: 3%;
@@ -34,9 +36,17 @@
 }
 
 .save-exite-container{
-    transition: margin .1s;
+    flex-direction: row;
+    display: flex;
+    transition: margin .3s;
+    visibility: hidden;
+    transition: visibility margin .3s;
 }
+.save-exite-container:active{
+    visibility: visible;
+}
+
 .modal-card-description:focus + .save-exite-container{
     margin-left: 3%;
-
+    visibility: visible;
 }
