@@ -4,8 +4,14 @@
 ## App Description
 
 Simply put it's an Task Managment app that enables Teams To work together
-In the project directory, you can run:
 
+##small Demo
+![]
+
+##App features
+*Smoth Animations and user Friendly
+*persistent data storage,using browser localStorage
+In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
