@@ -6,11 +6,12 @@
 Simply put it's an Task Managment app that enables Teams To work together
 
 ##small Demo
-![]
+![](https://github.com/mostafasobh/Task-Management-Web-App/blob/main/images/trello-clone-google-chrome-2020-12-22-13-55-17_XYuLxmOk_0lKq.gif)
 
-##App features
-*Smoth Animations and user Friendly
-*persistent data storage,using browser localStorage
+Markup: ##App features
+       *Smoth Animations and user Friendly
+       *persistent data storage,using browser localStorage
+<br/>
 In the project directory, you can run:
 ### `npm start`
 
