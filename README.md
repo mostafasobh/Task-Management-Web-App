@@ -14,7 +14,7 @@ Sophisticated Task Managment app that enables Teams To work together
 
 
 ## Installation
- 1.Clone project repo from your command propmt by typing : `git clone https://github.com/mostafasobh/Task-Management-Web-App.git`<br />
- 2.open package.json with your code editor <br />
- 3.from your command prompt run npm install all the dependencies <br />
- 4.after installing all the dependencies run npm start <br />
+ 1-Clone project repo from your command propmt by typing : `git clone https://github.com/mostafasobh/Task-Management-Web-App.git`<br />
+ 2-open package.json with your code editor <br />
+ 3-from your command prompt run npm install (all the dependencies in the package.json file) <br />
+ 4-after installing all the dependencies run npm start <br />
